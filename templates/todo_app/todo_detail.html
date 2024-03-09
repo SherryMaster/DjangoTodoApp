@@ -1,0 +1,8 @@
+{% extends 'todo_app/base.html' %}
+
+{% block title %}Todo - {{ todo.title }}{% endblock %}
+
+{% block content %}
+<h1>{{ todo.title }}</h1>
+<p>{{ todo.description }}</p>
+{% endblock %}

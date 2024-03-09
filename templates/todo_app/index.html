@@ -3,4 +3,28 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
+<h1>Tasks</h1>
+<ul class="todo-list-group">
+ {% for todo in todo_list %}
+     <li data-todo-id="{{ todo.id }}"><a class="todo" href="{% url 'todo_app:todo_detail' todo.id %}"><input type="checkbox" class="todo-checkbox" {% if todo.completed %} checked {% endif %}>{{ todo.title }}</a></li>
+ {% endfor %}
+</ul>
+
+    <script>
+            $(".todo-checkbox").click(function() {
+                var todoId = $(this).closest("li").data("todo-id");
+                $.ajax({
+                    url: "{% url 'todo_app:todo_check' %}",
+                    method: "POST",
+                    data: {
+                        'csrfmiddlewaretoken': '{{ csrf_token }}',
+                        'todo_id': todoId,
+                    },
+                    success: function(data) {
+                    },
+                    error: function(error) {
+                    }
+                })
+            })
+    </script>
 {% endblock %}

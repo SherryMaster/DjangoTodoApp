@@ -1,0 +1,27 @@
+li a.todo {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #f5f5f5;
+    transition: all 0.3s ease;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    display: inline-block;
+}
+
+li a.todo:hover {
+    background-color: #e0e0e0;
+}
+
+.todo-list-group {
+    list-style: none;
+    padding: 0;
+}
+
+.todo-checkbox{
+
+}
