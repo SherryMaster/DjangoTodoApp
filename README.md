@@ -21,35 +21,42 @@ DjangoTodoApp is a simple and elegant to-do app built using Django. It helps you
 2. Navigate to the project directory:
 
     ```bash
-    cd DjangoTodoApp
+    cd TodoSite
     ```
 
 3. Create a virtual environment (optional but recommended):
 
+    Mac/Linux:
     ```bash
     python -m venv venv
     source venv/bin/activate
     ```
 
-4. Install dependencies:
+    Windows
+   ```bash
+   python -m venv venv
+   .\venv\Scripts\activate
+   ```
+
+5. Install dependencies:
 
     ```bash
     pip install -r requirements.txt
     ```
 
-5. Run migrations:
+6. Run migrations:
 
     ```bash
     python manage.py migrate
     ```
 
-6. Start the development server:
+7. Start the development server:
 
     ```bash
     python manage.py runserver
     ```
 
-7. Open your browser and visit http://localhost:8000/.
+8. Open your browser and visit http://localhost:8000/.
 
 ## Usage
 
